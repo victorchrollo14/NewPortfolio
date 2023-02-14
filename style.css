@@ -1,0 +1,68 @@
+:root {
+    --slate: #8892B0;
+    --green: #64ffda;
+    --white: #e6f1ff;
+    --lightest-slate: #ccd6f6;
+    --light-slate: #a8b2d1;
+    --Navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    --fz-mob-heading: 32px;
+    --fz-sub-heading: 15px;
+    --fz-para: 13px;
+    --border-radius: 4px;
+}
+
+body {
+    background: var(--light-navy);
+}
+
+.Victor {
+    margin: 0 5%;
+}
+
+
+@media (min-width: 320px) {
+
+    .Victor .header {
+        font-family: var(--font-mono);
+        color: var(--green);
+        font-size: var(--fz-mob-heading);
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .side-panel {
+        display: none;
+    }
+
+    .Victor .hamburger-menu {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 8px;
+    }
+
+    .Victor .hamburger-menu .block {
+        width: 40px;
+        height: 3px;
+        border-radius: var(--border-radius);
+        background: var(--green);
+    }
+
+    .Victor .hamburger-menu .block:nth-last-child(2) {
+        width: 35px;
+    }
+
+    .Victor .hamburger-menu .block:nth-last-child(1) {
+        width: 30px;
+    }
+
+}

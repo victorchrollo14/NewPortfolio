@@ -13,6 +13,7 @@
     --fz-sub-heading: 15px;
     --fz-para: 13px;
     --border-radius: 4px;
+    --tr-ease: all 1s ease;
 }
 
 body {
@@ -21,13 +22,14 @@ body {
 
 .Victor {
     margin: 0 5%;
+    font-family: var(--font-mono);
+
 }
 
 
 @media (min-width: 320px) {
 
     .Victor .header {
-        font-family: var(--font-mono);
         color: var(--green);
         font-size: var(--fz-mob-heading);
         height: 50px;
@@ -35,10 +37,6 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .side-panel {
-        display: none;
     }
 
     .Victor .hamburger-menu {
@@ -63,6 +61,98 @@ body {
 
     .Victor .hamburger-menu .block:nth-last-child(1) {
         width: 30px;
+    }
+
+    .Victor .side-panel {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        height: 80vh;
+        width: 70%;
+        color: var(--white);
+        background: var(--Navy);
+        font-family: var(--font-mono);
+    }
+
+    .Victor .side-panel nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        gap: 10px;
+    }
+
+    .side-panel nav .cross {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin: 10px 0 0 80%;
+    }
+
+    .side-panel nav .cross .line1,
+    .line2 {
+        height: 30px;
+        width: 2px;
+        background: var(--green);
+        margin: 10px 0 0 0;
+
+    }
+
+    .side-panel nav .cross .line1 {
+        transform: rotate(45deg);
+    }
+
+    .side-panel nav .cross .line2 {
+        transform: rotate(-45deg);
+    }
+
+
+
+    ol {
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .side-panel nav ol li {
+        counter-increment: item 1;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .side-panel nav ol li::before {
+        content: "0" counter(item)".";
+        color: var(--green);
+        font-size: medium;
+        margin: 0 0 5px 0;
+
+    }
+
+    .side-panel nav ol li a {
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        color: var(--light-slate);
+        font-size: clamp(14px, 5vw, 20px);
+        margin: 0 0 20px 0;
+    }
+
+    .side-panel .resume {
+        width: 10rem;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--green);
+        transition: var(--tr-ease);
+    }
+
+    .side-panel .resume:hover {
+        background: var(--lightest-navy);
     }
 
 }

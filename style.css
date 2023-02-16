@@ -162,7 +162,7 @@ body {
 
     /* Hero section */
     .hero {
-        margin: 50px 0;
+        margin: 50px 0 80px 0;
     }
 
     .hero h1 {
@@ -201,6 +201,38 @@ body {
     .hero .connect a {
         color: inherit;
         text-decoration: inherit;
+    }
+
+    /* About me section */
+    .sub-heading {
+        font-family: var(--font-mono);
+        font-weight: var(--fw-semi-bold);
+        color: var(--white);
+        display: flex;
+        flex-direction: row;
+        width: inherit;
+    }
+
+    .numbering::before {
+        counter-increment: section 1;
+        content: "0" counter(section) ".";
+
+        font-family: var(--font-mono);
+        font-weight: var(--fw-regular);
+        font-size: var(--fz-lg);
+        color: var(--green);
+        margin: 5px 5px 0 0;
+    }
+
+    .numbering::after {
+        content: "";
+        display: block;
+        height: 0.5px;
+        width: 200px;
+        position: relative;
+        margin: 0 0 0 20px;
+        top: 15px;
+        background: var(--lightest-navy);
     }
 
     /* Repeated classes */

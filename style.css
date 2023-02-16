@@ -14,6 +14,19 @@
     --fz-para: 13px;
     --border-radius: 4px;
     --tr-ease: all 1s ease;
+    --tr-linear: all .5s linear;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+    --fz-heading-max: 80px;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+
 }
 
 body {
@@ -69,7 +82,7 @@ body {
         top: 0;
         right: 0;
         z-index: 1;
-        height: 80vh;
+        height: 100vh;
         width: 70%;
         color: var(--white);
         background: var(--Navy);
@@ -83,7 +96,7 @@ body {
         align-items: center;
         justify-content: space-around;
         position: relative;
-        gap: 10px;
+        gap: 20px;
     }
 
     .side-panel nav .cross {
@@ -129,7 +142,6 @@ body {
     .side-panel nav ol li::before {
         content: "0" counter(item)".";
         color: var(--green);
-        font-size: medium;
         margin: 0 0 5px 0;
 
     }
@@ -143,17 +155,76 @@ body {
         margin: 0 0 20px 0;
     }
 
-    .side-panel .resume {
+    .green-text {
+        color: var(--green);
+    }
+
+
+    /* Hero section */
+    .hero {
+        margin: 50px 0;
+    }
+
+    .hero h1 {
+        font-family: var(--font-mono);
+        font-weight: var(--fw-regular);
+        font-size: clamp(var(--fz-sm), 5vw, var(--fz-lg));
+        margin: 0 0 10px 0;
+    }
+
+    .hero .my-name {
+        color: var(--white);
+        font-family: var(--font-sans);
+        font-size: clamp(35px, 8vw, 80px);
+        font-weight: var(--fw-semi-bold);
+        margin: 0;
+    }
+
+    .hero .one-liner {
+        color: var(--slate);
+        font-family: var(--font-sans);
+        font-size: clamp(35px, 8vw, 80px);
+        margin: 0;
+    }
+
+    .hero .description {
+        color: var(--light-slate);
+        font-family: var(--font-sans);
+        font-size: var(--fz-lg);
+    }
+
+    .des {
+        max-width: 540px;
+        margin: 20px 0;
+    }
+
+    .hero .connect a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    /* Repeated classes */
+    .button {
         width: 10rem;
         text-align: center;
-        padding: 10px 0;
+        padding: 15px 0;
+        margin: 20px 0 0 0;
+        color: var(--green);
+        background: transparent;
+        font-size: var(--fz-md);
+        font-family: var(--font-mono);
+        cursor: pointer;
         border-radius: var(--border-radius);
         border: 1px solid var(--green);
         transition: var(--tr-ease);
     }
 
-    .side-panel .resume:hover {
+    .hover-effect:hover {
         background: var(--lightest-navy);
     }
 
+    .text-hover-effect:hover {
+        color: var(--green);
+        transition: var(--tr-linear);
+    }
 }

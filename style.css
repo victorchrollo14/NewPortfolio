@@ -74,6 +74,7 @@ body {
         color: var(--white);
         background: var(--Navy);
         font-family: var(--font-mono);
+        transition: var(--tr-ease);
     }
 
     .Victor .side-panel nav {
@@ -89,15 +90,17 @@ body {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        margin: 10px 0 0 80%;
+        margin: 10px 0 0 75%;
+        gap: 1px;
     }
 
     .side-panel nav .cross .line1,
     .line2 {
-        height: 30px;
-        width: 2px;
+        height: 35px;
+        width: 3px;
         background: var(--green);
         margin: 10px 0 0 0;
+        border-radius: var(--border-radius);
 
     }
 
@@ -106,10 +109,8 @@ body {
     }
 
     .side-panel nav .cross .line2 {
-        transform: rotate(-45deg);
+        transform: rotate(-45deg) translate(-3px, -2px);
     }
-
-
 
     ol {
         list-style: none;

@@ -259,6 +259,19 @@ body {
 
     }
 
+    .about-me .image-section {
+        height: 280px;
+        width: 280px;
+
+    }
+
+    .about-me .image-section:hover .frame {
+        animation: frame-up 0.4s linear;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+
+    }
+
     .about-me .image {
         width: 250px;
         height: 250px;
@@ -275,6 +288,8 @@ body {
         border-radius: var(--border-radius);
         transform: translate(20px, 25px);
     }
+
+
 
 
     /* Repeated classes */
@@ -319,10 +334,6 @@ body {
     }
 
     /* animations */
-    .frame-up {
-        animation: frame-up 0.4s linear;
-        animation-fill-mode: forwards;
-    }
 
     @keyframes frame-up {
         50% {
@@ -334,9 +345,5 @@ body {
         }
 
     }
-
-
-
-
 
 }

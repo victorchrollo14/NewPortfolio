@@ -237,7 +237,7 @@ body {
 
     .about-me .tech-stack {
         width: 200px;
-        margin: 0 0 0 10px;
+        margin: 0 0 40px 10px;
         display: flex;
         justify-content: space-between;
         font-family: var(--fz-xxs);
@@ -258,6 +258,24 @@ body {
         margin: 0 10px 0 0;
 
     }
+
+    .about-me .image {
+        width: 250px;
+        height: 250px;
+        background: url(assets/luffy.jpg);
+        background-size: cover;
+        border-radius: var(--border-radius);
+        transform: translate(0px, -250px);
+    }
+
+    .about-me .frame {
+        width: 250px;
+        height: 250px;
+        border: 3px solid var(--green);
+        border-radius: var(--border-radius);
+        transform: translate(20px, 25px);
+    }
+
 
     /* Repeated classes */
     .button {
@@ -299,5 +317,26 @@ body {
         font-family: var(--font-sans);
         font-size: clamp(16px, 4vw, var(--fz-lg));
     }
+
+    /* animations */
+    .frame-up {
+        animation: frame-up 0.4s linear;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes frame-up {
+        50% {
+            transform: translate(10px, 20px);
+        }
+
+        100% {
+            transform: translate(10px, 15px);
+        }
+
+    }
+
+
+
+
 
 }

@@ -155,14 +155,9 @@ body {
         margin: 0 0 20px 0;
     }
 
-    .green-text {
-        color: var(--green);
-    }
-
-
     /* Hero section */
     .hero {
-        margin: 50px 0 80px 0;
+        margin: 50px 0 100px 0;
     }
 
     .hero h1 {
@@ -187,12 +182,6 @@ body {
         margin: 0;
     }
 
-    .hero .description {
-        color: var(--light-slate);
-        font-family: var(--font-sans);
-        font-size: var(--fz-lg);
-    }
-
     .des {
         max-width: 540px;
         margin: 20px 0;
@@ -207,32 +196,67 @@ body {
     .sub-heading {
         font-family: var(--font-mono);
         font-weight: var(--fw-semi-bold);
+        font-size: clamp(20px, 5vw, var(--fz-heading));
         color: var(--white);
         display: flex;
         flex-direction: row;
         width: inherit;
+        white-space: nowrap;
+        margin: 0 0 30px 0;
     }
 
     .numbering::before {
         counter-increment: section 1;
         content: "0" counter(section) ".";
-
         font-family: var(--font-mono);
         font-weight: var(--fw-regular);
-        font-size: var(--fz-lg);
+        font-size: clamp(var(--fz-md), 5vw, var(--fz-sub-heading));
         color: var(--green);
-        margin: 5px 5px 0 0;
+        margin: 3px 5px 0 0;
     }
 
     .numbering::after {
         content: "";
         display: block;
-        height: 0.5px;
-        width: 200px;
+        height: 1px;
+        width: clamp(100px, 60%, 800px);
         position: relative;
-        margin: 0 0 0 20px;
-        top: 15px;
+        top: 13px;
+        margin: 0 0 0 10px;
         background: var(--lightest-navy);
+    }
+
+    .about-me {
+        margin: 30px 0;
+    }
+
+    .about-me .about-me-des {
+        max-width: 700px;
+        margin: 20px 0;
+    }
+
+    .about-me .tech-stack {
+        width: 200px;
+        margin: 0 0 0 10px;
+        display: flex;
+        justify-content: space-between;
+        font-family: var(--fz-xxs);
+        color: var(--light-slate);
+    }
+
+    .about-me .tech-stack ol {
+        width: max-content;
+    }
+
+    .about-me .tech-stack li {
+        margin: 0 0 8px 0;
+    }
+
+    .about-me .tech-stack li::before {
+        content: "\1F892";
+        color: var(--green);
+        margin: 0 10px 0 0;
+
     }
 
     /* Repeated classes */
@@ -259,4 +283,21 @@ body {
         color: var(--green);
         transition: var(--tr-linear);
     }
+
+    .green-text {
+        color: var(--green);
+        background: transparent;
+        text-decoration: none;
+    }
+
+    .text-underline:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        color: var(--light-slate);
+        font-family: var(--font-sans);
+        font-size: clamp(16px, 4vw, var(--fz-lg));
+    }
+
 }

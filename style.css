@@ -203,11 +203,12 @@ body {
         width: inherit;
         white-space: nowrap;
         margin: 0 0 30px 0;
+        counter-increment: section 1;
     }
 
     .numbering::before {
-        counter-increment: section 1;
         content: "0" counter(section) ".";
+        counter-increment: section 1;
         font-family: var(--font-mono);
         font-weight: var(--fw-regular);
         font-size: clamp(var(--fz-md), 5vw, var(--fz-sub-heading));
@@ -227,7 +228,7 @@ body {
     }
 
     .about-me {
-        margin: 30px 0;
+        margin: 20rem 0;
     }
 
     .about-me .about-me-des {
@@ -289,6 +290,51 @@ body {
         transform: translate(20px, 25px);
     }
 
+    /* Experience Section */
+    .experience {
+        margin: 0 0 30rem 0;
+    }
+
+    .experience .company-name {
+        font-family: var(--font-sans);
+        color: var(--lightest-slate);
+        font-size: clamp(var(--fz-md), 4vw, var(--fz-xl));
+        font-weight: var(--fw-regular);
+        width: fit-content;
+        margin: 30px 0 0 0;
+    }
+
+    .company-name .company {
+        color: var(--green);
+    }
+
+    .experience .duration {
+        font-family: var(--font-mono);
+        font-size: var(--fz-sm);
+        font-weight: var(--fw-regular);
+        color: var(--slate);
+        margin: 10px 0;
+    }
+
+    .experience .description {
+        position: relative;
+    }
+
+    .experience .des-points {
+        /* margin: 0 0 20px 20px; */
+        padding: 0 0 0 20px;
+        max-width: 600px;
+        font-size: var(--fz-md);
+    }
+
+    .experience .des-points::before {
+        content: "\1F892";
+        color: var(--green);
+        padding: 0 20px 40px 0;
+        position: absolute;
+        left: 0px;
+    }
+
 
 
 
@@ -331,6 +377,20 @@ body {
         color: var(--light-slate);
         font-family: var(--font-sans);
         font-size: clamp(16px, 4vw, var(--fz-lg));
+    }
+
+    .underlined {
+        line-height: 1.5;
+        background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
+        background-position: 0 1.3em;
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background 1s;
+        cursor: pointer;
+    }
+
+    .underlined:hover {
+        background-size: 100% 100%;
     }
 
     /* animations */

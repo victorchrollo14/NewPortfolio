@@ -1,0 +1,9 @@
+Progress
+1) Hero section  ☑️
+2) side navigation  ☑️
+3) about me    ☑️
+4) Experience section
+5) projects section
+6) hire me/ contact me section
+7) Responsiveness
+8) Animations   

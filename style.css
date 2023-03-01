@@ -26,6 +26,10 @@
     --fz-heading-max: 80px;
     --fw-regular: 400;
     --fw-semi-bold: 600;
+    --w1: 800px;
+    --w2: 400px;
+    --N: 2;
+    --M: 1;
 
 }
 
@@ -342,21 +346,28 @@ body {
 
     .project-section .project-container {
         display: grid;
-        grid-template-columns: repeat(autofill, min-max(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(clamp(clamp(100%/(var(--N) + 1) + 0.1%, (var(--w1) - 100vw)*1000, 100%/(var(--M) + 1) + 0.1%), (var(--w2) - 100vw)*1000, 100%), 1fr));
+        gap: 10px;
         align-items: center;
         padding: 0;
         list-style: none;
         gap: 10px;
         position: relative;
+        cursor: pointer;
     }
 
     .project-section .project-container .project {
-        height: 300px;
+        box-sizing: content-box;
+        height: 320px;
         background: var(--lightest-navy);
-        padding: 30px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+
+    .project .heading-description {
+        max-width: 500px;
     }
 
     .project-section .project-container .project-1::before {

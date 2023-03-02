@@ -35,6 +35,9 @@
 
 body {
     background: var(--light-navy);
+    counter-reset: section;
+    margin: 0;
+
 }
 
 .Victor {
@@ -46,17 +49,22 @@ body {
 
 @media (min-width: 320px) {
 
-    .Victor .header {
+    .header {
+        padding: 0 5%;
         color: var(--green);
         font-size: var(--fz-mob-heading);
-        height: 50px;
+        height: 70px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        background: var(--light-navy);
+        position: sticky;
+        top: 0;
+        z-index: 10;
     }
 
-    .Victor .hamburger-menu {
+    .hamburger-menu {
         width: 40px;
         height: 30px;
         display: flex;
@@ -65,24 +73,24 @@ body {
         gap: 8px;
     }
 
-    .Victor .hamburger-menu .block {
+    .block {
         width: 40px;
         height: 3px;
         border-radius: var(--border-radius);
         background: var(--green);
     }
 
-    .Victor .hamburger-menu .block:nth-last-child(2) {
+    .hamburger-menu .block:nth-last-child(2) {
         width: 35px;
     }
 
-    .Victor .hamburger-menu .block:nth-last-child(1) {
+    .hamburger-menu .block:nth-last-child(1) {
         width: 30px;
     }
 
-    .Victor .side-panel {
+    .side-panel {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         z-index: 1;
@@ -92,14 +100,22 @@ body {
         background: var(--Navy);
         font-family: var(--font-mono);
         transition: var(--tr-ease);
+        z-index: 11;
     }
 
-    .Victor .side-panel nav {
+    .side-panel nav {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         position: relative;
+        gap: 20px;
+    }
+
+    .side-panel .nav-links {
+        margin: 20px 0 0 0;
+        display: flex;
+        flex-direction: column;
         gap: 20px;
     }
 
@@ -197,6 +213,7 @@ body {
     }
 
     /* About me section */
+    .numbering,
     .sub-heading {
         font-family: var(--font-mono);
         font-weight: var(--fw-semi-bold);
@@ -207,17 +224,19 @@ body {
         width: inherit;
         white-space: nowrap;
         margin: 0 0 30px 0;
-        counter-increment: section 1;
+        text-align: center;
+
     }
 
     .numbering::before {
+        /* height: fit-content; */
+        counter-increment: section;
         content: "0" counter(section) ".";
-        counter-increment: section 1;
         font-family: var(--font-mono);
         font-weight: var(--fw-regular);
         font-size: clamp(var(--fz-md), 5vw, var(--fz-sub-heading));
         color: var(--green);
-        margin: 3px 5px 0 0;
+        margin: 2px 5px 0 0;
     }
 
     .numbering::after {
@@ -422,9 +441,43 @@ body {
         color: var(--white);
     }
 
+    /* contact me  */
+    .contact-me {
+        text-align: center;
+        margin: 5rem 0;
+    }
 
+    .contact-me h2 {
+        display: block;
+    }
 
+    .contact-me h2::before {
+        counter-increment: section;
+        content: "0" counter(section) ".";
+        font-size: clamp(15px, 4vw, var(--fz-xl));
+        color: var(--green);
+    }
 
+    /* footer */
+    .footer .social-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .footer .social-links li {
+        width: 25px;
+    }
 
     /* Repeated classes */
     .button {
@@ -479,6 +532,10 @@ body {
 
     .underlined:hover {
         background-size: 100% 100%;
+    }
+
+    .blur-effect {
+        filter: blur(5px);
     }
 
     /* animations */

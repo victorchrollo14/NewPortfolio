@@ -2,9 +2,10 @@ const navMenu = document.querySelector(".hamburger-menu");
 const sidePanel = document.querySelector(".side-panel");
 const cross = document.querySelector(".cross");
 const mainBody = document.querySelector('.Victor');
-const navLinks = document.querySelector('.nav-links').querySelectorAll('li');
+const navLinks = document.querySelectorAll('.nav-links');
 const header = document.querySelector('.header');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
+const faders = document.querySelectorAll('.fade-in');
 let lastScroll = 140;
 
 
@@ -56,6 +57,31 @@ cross.addEventListener("click", hideSidePanel);
 navLinks.forEach(link => {
     link.addEventListener("click", hideSidePanel);
 });
+
+
+// Element fade-in on Scroll animation
+const appearOptions = {
+    threshold: 0.5
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+    entries, 
+    appearOnScroll
+    ) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting)
+            return;
+        else{
+            console.log(entry)
+            entry.target.classList.add("appear");
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+})
 
 
 

@@ -33,18 +33,20 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--light-navy);
-    counter-reset: section;
-    counter-reset: item;
     margin: 0;
+    counter-reset: section item;
 
 }
 
 .Victor {
     margin: 0 5%;
     font-family: var(--font-mono);
-
 }
 
 
@@ -79,9 +81,8 @@ body {
     .header nav ol li {
         font-size: var(--fz-md);
         counter-increment: item 1;
-        width: 100%;
-        text-align: center;
-
+        width: fit-content;
+        margin: 0 30px 0 0;
     }
 
     .header nav ol li::before {
@@ -311,7 +312,7 @@ body {
     }
 
     .about-me .tech-stack li::before {
-        content: "\1F892";
+        content: "▹";
         color: var(--green);
         margin: 0 10px 0 0;
 
@@ -385,7 +386,7 @@ body {
     }
 
     .experience .des-points::before {
-        content: "\1F892";
+        content: " ▹";
         color: var(--green);
         padding: 0 20px 40px 0;
         position: absolute;
@@ -582,6 +583,36 @@ body {
     }
 
     /* animations */
+    .fade-in {
+        opacity: 0;
+        transition: opacity 250ms ease-in;
+    }
+
+    .project.project-1,
+    .project.project-3 {
+        transform: translateY(30%);
+        transition: transform 0.8s ease;
+    }
+
+    .project.project-2,
+    .project.project-4 {
+        transform: translateY(30%);
+        transition: transform 0.8s ease;
+    }
+
+    .project.project-1.appear,
+    .project.project-2.appear,
+    .project.project-3.appear,
+    .project.project-4.appear {
+        transform: translateY(0);
+    }
+
+
+
+    .fade-in.appear {
+        opacity: 1;
+    }
+
     .slide-left {
         -webkit-animation: slide-left 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -671,4 +702,9 @@ body {
         padding: 10px;
         margin: 0;
     }
+
+    .footer {
+        display: none;
+    }
+
 }

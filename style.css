@@ -523,6 +523,17 @@ body {
         width: 25px;
     }
 
+    .footer .social-links li svg:hover {
+        transform: translateY(-3px);
+        color: var(--green);
+    }
+
+
+
+    .email-link {
+        display: none;
+    }
+
     /* Repeated classes */
     .button {
         width: 10rem;
@@ -765,7 +776,7 @@ body {
         display: inline;
         letter-spacing: 0.2px;
         color: var(--slate);
-        font-family: var(--font-sans);
+        font-family: var(--font-mono);
         width: 100%;
         transition: transform 0.2s ease;
 

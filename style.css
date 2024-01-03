@@ -312,7 +312,7 @@ body {
     }
 
     .about-me .tech-stack li {
-        margin: 0 0 8px 0;
+        margin: 0 8px 8px 0;
     }
 
     .about-me .tech-stack li::before {
@@ -416,7 +416,8 @@ body {
 
     .project-section .project-container .project {
         box-sizing: content-box;
-        height: 320px;
+        min-height: fit-content;
+        height: 250px;
         background: var(--lightest-navy);
         padding: 20px;
         display: flex;

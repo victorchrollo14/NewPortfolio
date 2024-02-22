@@ -804,3 +804,11 @@ body {
 .skill-list {
   column-count: 2;
 }
+
+.hidden-link{
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  left: -9999px;
+}

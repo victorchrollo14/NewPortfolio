@@ -8,8 +8,6 @@ const hamburgerMenu = document.querySelector('.hamburger-menu');
 const faders = document.querySelectorAll('.fade-in');
 let lastScroll = 140;
 
-
-
 function showSidePanel(e){
     sidePanel.style.display = "block";
     sidePanel.style.right = "0";
@@ -33,7 +31,6 @@ function hideSidePanel(){
 
     
 }
-
 
 function changeHeader(event){
     let currentScroll = mainBody.getBoundingClientRect().top;

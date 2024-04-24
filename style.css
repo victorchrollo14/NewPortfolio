@@ -329,10 +329,17 @@ body {
   .about-me .image {
     width: 250px;
     height: 250px;
-    background: url(assets/luffy.jpg);
+    background: url(assets/victor.jpeg);
+    background-color: rgba(102, 255, 218, 0.46);
+    background-blend-mode: multiply;
     background-size: cover;
     border-radius: var(--border-radius);
     transform: translate(0px, -250px);
+  }
+
+  .about-me .image:hover {
+    background-blend-mode: normal;
+    background-color: none;
   }
 
   .about-me .frame {
@@ -805,10 +812,11 @@ body {
   column-count: 2;
 }
 
-.hidden-link{
+.hidden-link {
   width: 0;
   height: 0;
   position: absolute;
   overflow: hidden;
   left: -9999px;
 }
+

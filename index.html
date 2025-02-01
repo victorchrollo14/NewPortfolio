@@ -112,11 +112,13 @@
             <div class="skill-category">
               <h4>FrontEnd</h4>
               <ol class="skill-list">
+                <li>JavaScript</li>
+                <li>Typescript</li>
                 <li>React.js</li>
                 <li>Next.js</li>
+                <li>Remix</li>
                 <li>TailwindCss</li>
                 <li>Redux</li>
-                <li>TypeScript</li>
                 <li>Material Ui</li>
                 <li>Shadcd Ui</li>
                 <li>Figma</li>
@@ -125,6 +127,8 @@
             <div class="skill-category">
               <h4>Backend</h4>
               <ol class="skill-list">
+                <li>python</li>
+                <li>golang</li>
                 <li>Node.js</li>
                 <li>Express.js</li>
                 <li>hono.js</li>
@@ -132,9 +136,11 @@
                 <li>MongoDB</li>
                 <li>PostgreSQL</li>
                 <li>MySQL</li>
+                <li>redis</li>
                 <li>Prisma</li>
                 <li>Mongoose</li>
                 <li>WebRTC</li>
+                <li>rabbitmq</li>
               </ol>
             </div>
             <div class="skill-category">
@@ -145,6 +151,7 @@
                 <li>Digital Ocean</li>
                 <li>linux</li>
                 <li>Docker</li>
+                <li>Kubernetes</li>
                 <li>Nginx</li>
                 <li>Serverless</li>
                 <li>Github actions</li>
@@ -193,7 +200,7 @@
         <!-- Experience 2 -->
         <div class="exp1">
           <h3 class="company-name">
-            <span>Full Stack Developer</span><br />
+            <span>Front End Developer and Ui Designer</span><br />
             <span class="company">
               @
               <a href="https://www.zento.money/" class="green-text underlined"
@@ -223,11 +230,127 @@
             </p>
           </div>
         </div>
+        <hr />
+        <!-- Experience 3 -->
+        <div class="exp1">
+          <h3 class="company-name">
+            <span>Full Stack Engineer</span><br />
+            <span class="company">
+              @
+              <a
+                href="https://www.linkedin.com/company/protocorp/posts/?feedView=all"
+                class="green-text underlined"
+                >Protocorp</a
+              >
+            </span>
+          </h3>
+          <h4 class="duration">May 2024 - Present</h4>
+          <div class="description">
+            <p class="des-points">
+              Working on a cool and interesting project
+              <a href="https://d3d.ai" class="green-text text-hover-effect"
+                >deepinspect</a
+              >
+              building a web application in next.js for sharing, viewing and
+              analyzing 3d models, then a couple of micro-services for 3D -
+              Model convertion and Streaming large point clouds.
+            </p>
+            <p class="des-points">
+              went through a large open source codebase (<a
+                href="https://github.com/potree/potree"
+                class="green-text text-hover-effect"
+                >Potree</a
+              >), modified and integrated it into our application to support
+              loading large 3d models, added support for 3d tiles using cesium.
+            </p>
+            <p class="des-points">
+              designed the web application in figma and then built it with
+              next.js and build the microservices with python, then learnt a lot
+              of new stuff like AWS lambda, SQS, tanstack table, S3 multipart
+              uploads and more.
+            </p>
+          </div>
+        </div>
       </section>
       <!-- Projects Section  -->
       <section class="project-section" id="WORK">
         <h2 class="sub-heading numbering fade-in">Projects I've Built</h2>
         <ul class="project-container">
+          <!-- project - 0  -->
+          <li class="project project-0 fade-in" id="pr1">
+            <header class="text-hover-effect project-header">CodeArena</header>
+            <div class="heading-description description">
+              Built an application similar to leetcode, built all the services
+              end to end, a next.js web application, where user can practice
+              coding problems, then built a remote code execution engine with
+              python that uses docker to run the user submitted code safely in
+              an isolated environment, used rabbitmq as a messaging queue and
+              redis for caching the results
+            </div>
+            <footer class="tech-used">
+              <div class="tech">
+                <ul>
+                  <li>Next.js</li>
+                  <li>python</li>
+                  <li>docker</li>
+                  <li>Kubernetes</li>
+                  <li>redis</li>
+                  <li>rabbitmq</li>
+                </ul>
+              </div>
+              <div class="links">
+                <div class="source-code">
+                  <a
+                    href="https://github.com/victorchrollo14/codeArena"
+                    class="text-hover-effect"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-github"
+                    >
+                      <title>GitHub</title>
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="external-link text-hover-effect">
+                  <a
+                    href="https://zento-money.vercel.app/"
+                    class="text-hover-effect"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-external-link"
+                    >
+                      <title>External Link</title>
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </footer>
+          </li>
+          <!-- project - 1  -->
           <li class="project project-1 fade-in" id="pr1">
             <header class="text-hover-effect project-header">
               Zento Money
@@ -343,7 +466,7 @@
                 </div>
                 <div class="external-link text-hover-effect">
                   <a
-                    href="https://mern-ecommerce-frontend-theta.vercel.app/"
+                    href="https://menstribe.vercel.app/"
                     class="text-hover-effect"
                   >
                     <svg
@@ -580,76 +703,76 @@
             </footer>
           </li>
           <!-- Project 4 -->
-          <li class="project project-4 fade-in" id="pr4">
-            <header class="text-hover-effect project-header">
-              Scripting and Automation
-            </header>
-            <div class="heading-description description">
-              As an intern at
-              <span class="green-text underlined">sensel</span> Developed MySQL
-              automation scripts for efficient GPRS testing at Sensel.
-              Engineered a comprehensive GPRS testing script with hardware
-              control for accurate simulations.
-            </div>
-            <footer class="tech-used">
-              <div class="tech">
-                <ul>
-                  <li>python</li>
-                  <li>DataScraping</li>
-                  <li>MySQL</li>
-                </ul>
-              </div>
-              <div class="links">
-                <div class="source-code">
-                  <a
-                    href="https://github.com/victorchrollo14/Python-Automation-Scripting"
-                    class="text-hover-effect"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-github"
-                    >
-                      <title>GitHub</title>
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-                <div class="external-link text-hover-effect">
-                  <a
-                    href="https://github.com/victorchrollo14/Python-Automation-Scripting"
-                    class="text-hover-effect"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-external-link"
-                    >
-                      <title>External Link</title>
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </footer>
+          <!-- <li class="project project-4 fade-in" id="pr4"> -->
+          <!--   <header class="text-hover-effect project-header"> -->
+          <!--     Scripting and Automation -->
+          <!--   </header> -->
+          <!--   <div class="heading-description description"> -->
+          <!--     As an intern at -->
+          <!--     <span class="green-text underlined">sensel</span> Developed MySQL -->
+          <!--     automation scripts for efficient GPRS testing at Sensel. -->
+          <!--     Engineered a comprehensive GPRS testing script with hardware -->
+          <!--     control for accurate simulations. -->
+          <!--   </div> -->
+          <!--   <footer class="tech-used"> -->
+          <!--     <div class="tech"> -->
+          <!--       <ul> -->
+          <!--         <li>python</li> -->
+          <!--         <li>DataScraping</li> -->
+          <!--         <li>MySQL</li> -->
+          <!--       </ul> -->
+          <!--     </div> -->
+          <!--     <div class="links"> -->
+          <!--       <div class="source-code"> -->
+          <!--         <a -->
+          <!--           href="https://github.com/victorchrollo14/Python-Automation-Scripting" -->
+          <!--           class="text-hover-effect" -->
+          <!--         > -->
+          <!--           <svg -->
+          <!--             xmlns="http://www.w3.org/2000/svg" -->
+          <!--             role="img" -->
+          <!--             viewBox="0 0 24 24" -->
+          <!--             fill="none" -->
+          <!--             stroke="currentColor" -->
+          <!--             stroke-width="2" -->
+          <!--             stroke-linecap="round" -->
+          <!--             stroke-linejoin="round" -->
+          <!--             class="feather feather-github" -->
+          <!--           > -->
+          <!--             <title>GitHub</title> -->
+          <!--             <path -->
+          <!--               d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" -->
+          <!--             ></path> -->
+          <!--           </svg> -->
+          <!--         </a> -->
+          <!--       </div> -->
+          <!--       <div class="external-link text-hover-effect"> -->
+          <!--         <a -->
+          <!--           href="https://github.com/victorchrollo14/Python-Automation-Scripting" -->
+          <!--           class="text-hover-effect" -->
+          <!--         > -->
+          <!--           <svg -->
+          <!--             xmlns="http://www.w3.org/2000/svg" -->
+          <!--             role="img" -->
+          <!--             viewBox="0 0 24 24" -->
+          <!--             fill="none" -->
+          <!--             stroke="currentColor" -->
+          <!--             stroke-width="2" -->
+          <!--             stroke-linecap="round" -->
+          <!--             stroke-linejoin="round" -->
+          <!--             class="feather feather-external-link" -->
+          <!--           > -->
+          <!--             <title>External Link</title> -->
+          <!--             <path -->
+          <!--               d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" -->
+          <!--             ></path> -->
+          <!--             <polyline points="15 3 21 3 21 9"></polyline> -->
+          <!--             <line x1="10" y1="14" x2="21" y2="3"></line> -->
+          <!--           </svg> -->
+          <!--         </a> -->
+          <!--       </div> -->
+          <!--     </div> -->
+          <!--   </footer> -->
           </li>
         </ul>
       </section>

@@ -438,6 +438,7 @@ body {
 
   .project .heading-description {
     max-width: 500px;
+    min-height: 100px;
   }
 
   .project-section .project-container .project-1::before {
@@ -819,4 +820,3 @@ body {
   overflow: hidden;
   left: -9999px;
 }
-

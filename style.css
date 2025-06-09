@@ -7,9 +7,8 @@
   --Navy: #0a192f;
   --light-navy: #112240;
   --lightest-navy: #233554;
-  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
-  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   --fz-mob-heading: 32px;
   --fz-sub-heading: 15px;
   --fz-para: 13px;
@@ -86,7 +85,7 @@ body {
   }
 
   .header nav ol li::before {
-    content: "0" counter(item) ".";
+    content: '0' counter(item) '.';
     color: var(--green);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
@@ -191,7 +190,7 @@ body {
   }
 
   .side-panel nav ol li::before {
-    content: "0" counter(item) ".";
+    content: '0' counter(item) '.';
     color: var(--green);
     margin: 0 0 5px 0;
   }
@@ -233,7 +232,7 @@ body {
   }
 
   .des {
-    max-width: 540px;
+    max-width: 600px;
     margin: 20px 0;
   }
 
@@ -260,7 +259,7 @@ body {
   .numbering::before {
     /* height: fit-content; */
     counter-increment: section;
-    content: "0" counter(section) ".";
+    content: '0' counter(section) '.';
     font-family: var(--font-mono);
     font-weight: var(--fw-regular);
     font-size: clamp(var(--fz-md), 5vw, var(--fz-sub-heading));
@@ -269,7 +268,7 @@ body {
   }
 
   .numbering::after {
-    content: "";
+    content: '';
     display: block;
     height: 1px;
     width: clamp(100px, 60%, 800px);
@@ -310,7 +309,7 @@ body {
   }
 
   .about-me .tech-stack li::before {
-    content: "▹";
+    content: '▹';
     color: var(--green);
     margin: 0 10px 0 0;
   }
@@ -388,7 +387,7 @@ body {
   }
 
   .experience .des-points::before {
-    content: " ▹";
+    content: ' ▹';
     color: var(--green);
     padding: 0 20px 40px 0;
     position: absolute;
@@ -402,13 +401,17 @@ body {
 
   .project-section .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,
-        minmax(clamp(clamp(100%/ (var(--N) + 1) + 0.1%,
-              (var(--w1) - 100vw) * 1000,
-              100%/ (var(--M) + 1) + 0.1%),
-            (var(--w2) - 100vw) * 1000,
-            100%),
-          1fr));
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(
+        clamp(
+          clamp(100%/ (var(--N) + 1) + 0.1%, (var(--w1) - 100vw) * 1000, 100%/ (var(--M) + 1) + 0.1%),
+          (var(--w2) - 100vw) * 1000,
+          100%
+        ),
+        1fr
+      )
+    );
     gap: 10px;
     align-items: center;
     padding: 0;
@@ -434,7 +437,7 @@ body {
   }
 
   .project-section .project-container .project-1::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     background-image: url(assets/ecom.jpg);
@@ -507,7 +510,7 @@ body {
 
   .contact-me h2::before {
     counter-increment: section;
-    content: "0" counter(section) ".";
+    content: '0' counter(section) '.';
     font-size: clamp(15px, 4vw, var(--fz-xl));
     color: var(--green);
   }
@@ -585,9 +588,7 @@ body {
 
   .underlined {
     line-height: 1.5;
-    background-image: linear-gradient(to right,
-        var(--green) 0,
-        var(--green) 100%);
+    background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
     background-position: 0 1.3em;
     background-size: 0 100%;
     background-repeat: no-repeat;
@@ -753,7 +754,7 @@ body {
   }
 
   .aside-links::after {
-    content: "";
+    content: '';
     display: block;
     width: 1px;
     height: 150px;
@@ -787,7 +788,7 @@ body {
 
   .email-link::after {
     display: block;
-    content: "";
+    content: '';
     height: 150px;
     width: 1px;
     background: var(--slate);

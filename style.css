@@ -402,21 +402,13 @@ body {
 
   .project-section .project-container {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(
-        clamp(
-          clamp(
-            100%/ (var(--N) + 1) + 0.1%,
-            (var(--w1) - 100vw) * 1000,
-            100%/ (var(--M) + 1) + 0.1%
-          ),
-          (var(--w2) - 100vw) * 1000,
-          100%
-        ),
-        1fr
-      )
-    );
+    grid-template-columns: repeat(auto-fit,
+        minmax(clamp(clamp(100%/ (var(--N) + 1) + 0.1%,
+              (var(--w1) - 100vw) * 1000,
+              100%/ (var(--M) + 1) + 0.1%),
+            (var(--w2) - 100vw) * 1000,
+            100%),
+          1fr));
     gap: 10px;
     align-items: center;
     padding: 0;
@@ -593,11 +585,9 @@ body {
 
   .underlined {
     line-height: 1.5;
-    background-image: linear-gradient(
-      to right,
-      var(--green) 0,
-      var(--green) 100%
-    );
+    background-image: linear-gradient(to right,
+        var(--green) 0,
+        var(--green) 100%);
     background-position: 0 1.3em;
     background-size: 0 100%;
     background-repeat: no-repeat;

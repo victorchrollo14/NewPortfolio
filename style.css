@@ -761,14 +761,18 @@ body {
 
   .about-me .tech-stack {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
-    justify-content: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
     column-gap: 60px;
-    row-gap: 30px;
+    row-gap: 40px;
   }
 
+  /* each category's list splits into two columns of its own when there's room,
+     so a long list like Backend doesn't run away from its neighbour */
   .about-me .tech-stack .skill-list {
-    column-count: 1;
+    width: auto;
+    columns: 170px 2;
+    column-gap: 24px;
   }
 
   .experience {

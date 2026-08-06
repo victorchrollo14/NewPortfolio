@@ -30,6 +30,10 @@
   --w2: 400px;
   --N: 2;
   --M: 1;
+  /* the page stops growing past --page-max and centers itself; --page-gutter is
+     the space left over on either side, used to pull the fixed side rails in */
+  --page-max: 1600px;
+  --page-gutter: max(5vw, calc((100vw - var(--page-max)) / 2));
 }
 
 html {
@@ -43,12 +47,18 @@ body {
 }
 
 .Victor {
-  margin: 0 5%;
+  box-sizing: border-box;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0 5%;
   font-family: var(--font-mono);
 }
 
 @media (min-width: 200px) {
   .header {
+    box-sizing: border-box;
+    max-width: var(--page-max);
+    margin: 0 auto;
     padding: 0 5%;
     color: var(--green);
     font-size: var(--fz-mob-heading);
@@ -722,7 +732,7 @@ body {
   .social-links ul {
     position: fixed;
     bottom: 0;
-    left: 5%;
+    left: var(--page-gutter);
     flex-direction: column;
     gap: 30px;
     width: fit-content;
@@ -742,19 +752,31 @@ body {
   }
 
   .hero {
-    margin: 5rem 15vw 12rem 10vw;
+    margin: 5rem 15% 12rem 10%;
   }
 
   .about-me {
-    margin: 15rem 13vw;
+    margin: 15rem 13%;
+  }
+
+  .about-me .tech-stack {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: start;
+    column-gap: 60px;
+    row-gap: 30px;
+  }
+
+  .about-me .tech-stack .skill-list {
+    column-count: 1;
   }
 
   .experience {
-    margin: 15rem 15vw;
+    margin: 15rem 15%;
   }
 
   .project-section {
-    margin: 15rem 10vw;
+    margin: 15rem 10%;
   }
 
   .aside-links::after {
@@ -767,7 +789,7 @@ body {
 
   .email-link {
     position: fixed;
-    right: 5%;
+    right: var(--page-gutter);
     bottom: 0px;
     writing-mode: vertical-lr;
     display: flex;

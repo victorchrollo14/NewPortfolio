@@ -561,6 +561,10 @@ body {
     transition: var(--tr-ease);
   }
 
+  a.button {
+    display: block;
+  }
+
   .hover-effect:hover {
     background: var(--lightest-navy);
   }

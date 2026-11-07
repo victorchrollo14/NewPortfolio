@@ -90,8 +90,9 @@
             <br />
             Right now I'm a founding engineer at
             <a href="https://mytribe.in" class="green-text text-hover-effect">MyTribe</a>, an Indian services
-            marketplace for photographers, wedding planners, caterers and other expert providers. I build and ship the
-            production LLM agents there — WhatsApp, sales and onboarding — along with the search and infra behind them.
+            marketplace for photographers, wedding planners, caterers and other expert providers. I work on the
+            production LLM agents there (WhatsApp, sales, onboarding and voice), the Claude Code tooling the team runs
+            on, and the infra behind it all.
             <br />
             <br />
             Before that I was a full stack engineer building
@@ -106,11 +107,7 @@
               >Cubixso</a
             >. <br />
             <br />
-            On the open source side I contribute to
-            <a href="https://github.com/lavisht22/agent0" class="green-text">agento</a>, a platform to build, run and
-            monitor multi-provider LLM agents (it powers MyTribe's agent fleet), and I maintain the Windows and Linux
-            ports of <a href="https://github.com/victorchrollo14/orate-windows" class="green-text">Orate</a>, a
-            push-to-talk dictation app powered by Gemini. I've also made contributions to
+            On the open source side I've made contributions to
             <a href="https://github.com/lugenx/ecohabit" class="green-text">Ecohabit</a>,
             <a href="https://github.com/plone/volto" class="green-text">Plone Volto</a>,
             <a href="https://github.com/webstudio-is" class="green-text">Webstudio</a> and
@@ -169,10 +166,12 @@
                 <li>LLM agents</li>
                 <li>Vercel AI SDK</li>
                 <li>MCP tooling</li>
+                <li>Claude Code</li>
                 <li>OpenAI</li>
                 <li>Gemini</li>
                 <li>Realtime voice</li>
-                <li>Exotel telephony</li>
+                <li>Pipecat</li>
+                <li>Exotel / Plivo telephony</li>
                 <li>Vector search</li>
                 <li>Embeddings</li>
               </ol>
@@ -186,7 +185,6 @@
                 <li>Digital Ocean</li>
                 <li>linux</li>
                 <li>Docker</li>
-                <li>Kubernetes</li>
                 <li>Coolify</li>
                 <li>Trigger.dev</li>
                 <li>Nginx</li>
@@ -215,41 +213,32 @@
           </h3>
           <h4 class="duration">July 2025 - Present</h4>
           <div class="description">
-            <p class="des-points">
-              Built and shipped a fleet of production LLM agents on
-              <a href="https://github.com/lavisht22/agent0" class="green-text text-hover-effect">agento</a> — a WhatsApp
-              user-agent bot that converses with and qualifies consumers, an event-driven deal orchestrator that drives
-              leads through the sales pipeline, and a profile-editing agent that maintains provider profiles over an MCP
-              file-tool interface.
+            <p class="company-about">
+              Services marketplace connecting consumers with expert providers across India.
             </p>
             <p class="des-points">
-              Built a realtime AI phone agent for the sales team: an Exotel ↔ speech-to-speech bridge (OpenAI Realtime /
-              Gemini Live) over WebSockets handling inbound and outbound calls, with post-call transcription and
-              summaries fed back into the CRM and downstream agents.
+              Built the provider profile creation pipeline on Trigger.dev, turning an Instagram profile into a published page. It began as a multi-LLM, multi-step workflow and moved to a single agent as models improved. Also built the profile editing agent, which listens to curators and edits profiles.
             </p>
             <p class="des-points">
-              Shipped an LLM-driven SEO content system — programmatic listing and collection pages rendered from
-              AI-generated page specs — plus semantic vector search over provider services (voyage-3-large embeddings,
-              pgvector + PostGIS geo-filtering) and schema.org structured data and sitemaps that expanded organic search
-              surface.
+              Built a voice AI agent for inbound and outbound calls: Pipecat pipeline (Sarvam STT, OpenAI LLM, Cartesia TTS) with Plivo telephony, calling from the CRM, and summaries that hand off to the WhatsApp agent.
             </p>
             <p class="des-points">
-              Owned the provider onboarding pipeline — a multi-stage Trigger.dev workflow that turns a raw Instagram
-              profile into a full, published profile page: scrape posts and reels, extract business identity, transcribe
-              and process videos, AI-generate services, descriptions, packages, pricing, locations and SEO, auto-build
-              an image gallery clustered by service, embed all assets into Qdrant for search, and generate the public
-              profile.
+              Built the MCP server exposing leads, providers, proposals, WhatsApp and calls as tools. It powers the profile editing agent and the team's other LLM agents.
             </p>
             <p class="des-points">
-              Cut infrastructure cost ~70% by consolidating the OSS stack onto a single self-managed VPS via Coolify —
-              migrated Trigger.dev to a self-hosted instance and stood up Qdrant (vector search) and gowa (WhatsApp
-              gateway) among others, replacing managed services that would run $100+/mo at our tier and scale with
-              usage.
+              Designed and built the WhatsApp provider agent: notifies providers when a customer wants to connect, follows up on leads, confirms bookings and prices, flags customer issues, updates leads on their behalf, and takes instructions from and reports to the deal orchestrator agent.
             </p>
             <p class="des-points">
-              Built the internal "godmode" admin/CRM (WhatsApp inbox, lead human-review, click-to-call, installable PWA)
-              on React Router 7 SSR + HeroUI v3, backed by Supabase/Postgres — schema, migrations, RLS,
-              matchmaking/search RPCs, and index tuning on high-traffic chat and lead tables.
+              Built the RAG search API matching providers to a query and location: voyage-4-large embeddings, pgvector, PostGIS geo-filtering, Qdrant and ranking boosts.
+            </p>
+            <p class="des-points">
+              Led SEO: schema.org JSON-LD, sitemaps, Markdown pages and llms.txt for AI crawlers, and programmatic listing pages from AI-generated specs.
+            </p>
+            <p class="des-points">
+              Built the public provider pages (SSR) and the "godmode" CRM on React Router 7 + HeroUI, with Supabase/Postgres schema, RLS, RPCs and index tuning.
+            </p>
+            <p class="des-points">
+              Self-hosted open source platforms (Trigger.dev, Qdrant, Gowa) on EC2 with Coolify, saving an estimated 50–60% over usage-billed cloud plans.
             </p>
           </div>
         </div>
@@ -267,24 +256,23 @@
           </h3>
           <h4 class="duration">May 2024 - June 2025</h4>
           <div class="description">
-            <p class="des-points">
-              Worked on a cool and interesting project
-              <a href="https://d3d.ai" class="green-text text-hover-effect">deepinspect</a>
-              building a web application in next.js for sharing, viewing and analyzing 3d models, then a couple of
-              micro-services for 3D - Model convertion and Streaming large point clouds.
+            <p class="company-about">
+              Platform for engineers to inspect and share 3D models of structures in the browser and VR: <a href="https://d3d.ai" class="green-text text-hover-effect">DeepInspect (d3d.ai)</a>.
             </p>
             <p class="des-points">
-              went through a large open source codebase (<a
-                href="https://github.com/potree/potree"
-                class="green-text text-hover-effect"
-                >Potree</a
-              >), modified and integrated it into our application to support loading large 3d models, added support for
-              3d tiles using cesium.
+              Built the core platform on Next.js and MongoDB: projects and models, admin and user roles, direct-to-S3 multipart uploads for 20 GB+ models, conversion and in-browser viewing, and public, private or password-protected sharing.
             </p>
             <p class="des-points">
-              designed the web application in figma and then built it with next.js and build the microservices with
-              python, then learnt a lot of new stuff like AWS lambda, SQS, tanstack table, S3 multipart uploads and
-              more.
+              Built the 3D model viewer: forked and modified <a href="https://github.com/potree/potree" class="green-text text-hover-effect">Potree</a> for point clouds and integrated Cesium and three.js for 3D Tiles, with measurement tools, skyboxes, VR mode, a shared React sidebar, and an image panel for uploading drone photos and finding them by clicked point or map, resized on the fly with CloudFront + Lambda.
+            </p>
+            <p class="des-points">
+              Built the model conversion pipeline: S3 events → Lambda → SQS FIFO → a Dockerised Python worker on EC2 that checks the uploaded format (las, laz, ply, obj) and runs PotreeConverter for Potree octrees or MeshTiler for Cesium 3D Tiles.
+            </p>
+            <p class="des-points">
+              Built the model streaming server in async Python / FastAPI, with an EBS disk cache and partial fetching so the viewer loads only what's in view.
+            </p>
+            <p class="des-points">
+              Built defect reporting: mark defects on the 3D model and export PDF reports.
             </p>
           </div>
         </div>
@@ -378,19 +366,6 @@
           <h4 class="duration">no timeline</h4>
           <div class="description">
             <p class="des-points">
-              <a href="https://github.com/lavisht22/agent0" class="green-text"><strong>agento</strong></a>
-              – An open source platform to build, run, test and monitor multi-provider LLM agents, with a no-code UI so
-              non-technical teams can ship agents too. React + TanStack Router + HeroUI frontend, Fastify/Node runner,
-              Postgres/Drizzle, self-hostable via Docker. It powers the entire agent fleet at MyTribe, so a lot of what
-              I need in production ends up going back upstream.
-            </p>
-            <p class="des-points">
-              <a href="https://github.com/victorchrollo14/orate-windows" class="green-text"><strong>Orate</strong></a>
-              – An open source push-to-talk dictation app (WhisperFlow-style) powered by Google Gemini. I maintain the
-              Windows and Linux ports — the Windows one is built in C# / WPF on .NET 8 with NAudio and Win32 P/Invoke
-              for the global hotkey, synthetic paste and tray integration.
-            </p>
-            <p class="des-points">
               <a href="https://github.com/lugenx/ecohabit/pulls?q=is%3Apr+author%3Avictorchrollo14" class="green-text"
                 ><strong>Ecohabit</strong></a
               >
@@ -431,135 +406,6 @@
       <section class="project-section" id="WORK">
         <h2 class="sub-heading numbering fade-in">Projects I've Built</h2>
         <ul class="project-container">
-          <!-- agento -->
-          <li class="project project-1 fade-in" id="pr1">
-            <a href="https://github.com/lavisht22/agent0" class="text-hover-effect">
-              <header class="text-hover-effect project-header">agento</header>
-            </a>
-            <div class="heading-description description">
-              Open source platform to build, run, test and monitor multi-provider LLM agents, with a no-code UI so
-              non-technical teams can ship agents too. Self-hostable via Docker, and it powers the agent fleet I run in
-              production at MyTribe.
-            </div>
-            <footer class="tech-used">
-              <div class="tech">
-                <ul>
-                  <li>React.js</li>
-                  <li>TanStack</li>
-                  <li>HeroUI</li>
-                  <li>Fastify</li>
-                  <li>Drizzle</li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
-              <div class="links">
-                <div class="source-code">
-                  <a href="https://github.com/lavisht22/agent0" class="text-hover-effect">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-github"
-                    >
-                      <title>GitHub</title>
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-                <div class="external-link text-hover-effect">
-                  <a href="https://github.com/lavisht22/agent0" class="text-hover-effect">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-external-link"
-                    >
-                      <title>External Link</title>
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </footer>
-          </li>
-          <!-- orate -->
-          <li class="project project-2 fade-in" id="pr2">
-            <a href="https://github.com/victorchrollo14/orate-windows" class="text-hover-effect">
-              <header class="text-hover-effect project-header">Orate</header>
-            </a>
-            <div class="heading-description description">
-              Open source push-to-talk dictation app powered by Google Gemini. I maintain the Windows and Linux ports —
-              the Windows one is built in C# / WPF on .NET 8, using NAudio for capture and Win32 P/Invoke for the global
-              hotkey, synthetic paste and tray.
-            </div>
-            <footer class="tech-used">
-              <div class="tech">
-                <ul>
-                  <li>C#</li>
-                  <li>WPF</li>
-                  <li>.NET 8</li>
-                  <li>NAudio</li>
-                  <li>Gemini</li>
-                </ul>
-              </div>
-              <div class="links">
-                <div class="source-code">
-                  <a href="https://github.com/victorchrollo14/orate-windows" class="text-hover-effect">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-github"
-                    >
-                      <title>GitHub</title>
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path>
-                    </svg>
-                  </a>
-                </div>
-                <div class="external-link text-hover-effect">
-                  <a href="https://github.com/victorchrollo14/orate-windows" class="text-hover-effect">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-external-link"
-                    >
-                      <title>External Link</title>
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </footer>
-          </li>
           <!-- project - 0  -->
           <li class="project project-1 fade-in" id="pr1">
             <a href="https://github.com/victorchrollo14/codeArena" class="text-hover-effect">

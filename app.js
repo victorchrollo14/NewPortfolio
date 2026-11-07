@@ -57,8 +57,11 @@ navLinks.forEach(link => {
 
 
 // Element fade-in on Scroll animation
+// A ratio threshold never fires for sections taller than the screen (Experience on
+// mobile), so fade in once the top edge is 15% into the viewport instead.
 const appearOptions = {
-  threshold: 0.35
+  threshold: 0,
+  rootMargin: "0px 0px -15% 0px"
 };
 
 const appearOnScroll = new IntersectionObserver(function (

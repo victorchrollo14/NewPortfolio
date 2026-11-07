@@ -389,6 +389,13 @@ body {
     position: relative;
   }
 
+  .experience .company-about {
+    max-width: 600px;
+    margin-bottom: 10px;
+    font-size: var(--fz-md);
+    font-style: italic;
+  }
+
   .experience .des-points {
     /* margin: 0 0 20px 20px; */
     padding: 0 0 0 20px;
